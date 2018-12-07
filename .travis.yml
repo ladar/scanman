@@ -1,0 +1,10 @@
+os: linux
+dist: xenial
+sudo: required
+language: generic
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+script:
+  - docker run --cap-add=CAP_MKNOD --privileged -ti ladar/scanman /root/scan.sh generic centos7 vmware 1.8.50
